@@ -25,11 +25,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     ArrayAdapter<Double> adp;
     ListView lv;
     TextView tx, tx2, tx3, tx4;
-    LinearLayout mydialog,;
+    LinearLayout mydialog;
     EditText type, Findex, difference;
     String Stype = "", SFindex = "", Sdifference = "";
     Double[] numbers = new Double[20];
-    LinearLayout rl;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -144,9 +144,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         String st = item.getTitle().toString();
         if (st.equals("credits activity")) {
-            Intent si = new Intent(this,credits_activity.class);
+            Intent si = new Intent(this, credits_activity.class);
             startActivity(si);
-            else if 
+        }
+        return super.onOptionsItemSelected(item);
     }
-
 }
+
+
